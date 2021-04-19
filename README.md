@@ -1,7 +1,7 @@
 # Entrega_clase_Objetos
 
-**Jonathan Campos Lozano Codigo: 20211099023 **
-**Edwin Alfonso Correa Torres Codigo: 20211099024 **
+** Jonathan Campos Lozano Codigo: 20211099023 **
+** Edwin Alfonso Correa Torres Codigo: 20211099024 **
 
 
 Entrega de la actividad de repaso de POO
