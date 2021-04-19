@@ -3,20 +3,20 @@ from bridge import *
 
 
 def funcion_decorador(tipo):
-    tipos = ["1","2"]
+    tipos = ["humanos","orcos"]
 
     def funcion_interior(clase):
         class Extension(clase):
-            if tipo == "1":
+            if tipo == "humanos":
                 def crear_otros(self):
                     return AbstraccionRefinada(FabricaConcretaHumanos()) 
-            elif tipo == "2":
+            elif tipo == "orcos":
                 def crear_otros(self):
                     return AbstraccionRefinada(FabricaConcretaOrcos()) 
         return Extension
     return funcion_interior
 
-@funcion_decorador(tipo = "1")
+@funcion_decorador(tipo = "humanos")
 class FabricaHumanos(Fabrica):
     def crear_arma(self):
         return ArmaHumanos()
@@ -27,7 +27,7 @@ class FabricaHumanos(Fabrica):
     def crear_otros(self):
         return AbstraccionRefinada(FabricaConcretaHumanos()) 
 
-@funcion_decorador(tipo = "2")
+@funcion_decorador(tipo = "orcos")
 class FabricaOrcos(Fabrica):
     def crear_arma(self):
         return ArmaOrcos()
