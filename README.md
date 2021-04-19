@@ -1,10 +1,11 @@
 # Entrega_clase_Objetos
 
 ** Jonathan Campos Lozano Codigo: 20211099023 **
+
 ** Edwin Alfonso Correa Torres Codigo: 20211099024 **
 
 
-Entrega de la actividad de repaso de POO
+Entrega de la actividad de repaso de POO Se realizo utilizando el patron de diseño Bridge, para implementar los productos nuevos a la fabrica (Montura, Personaje)
 
 En la realización de este proceso encontramos que se realizo bajo el patron de diseño:
 
