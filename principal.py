@@ -1,7 +1,6 @@
-from flask import Flask,render_template
+from flask import Flask, render_template
 from fabricas import *
 from random import choice
-# es un micro framework
 
 app = Flask(__name__)
 
@@ -11,24 +10,20 @@ def principal():
     fabrica = choice(fabricas)
     arma = fabrica.crear_arma()
     escudo = fabrica.crear_escudo()
-    montura = fabrica.crear_montura()
-    cuerpo = fabrica.crear_cuerpo()
+
+    otros = fabrica.crear_otros()
+    montura = otros.crear_montura()
+    personaje = otros.crear_personaje()
 
     productos = []
+
     productos.append(arma)
     productos.append(escudo)
     productos.append(montura)
-    productos.append(cuerpo)
+    productos.append(personaje)
+    
 
     return render_template("productos.html", productos = productos)
 
-
 if __name__ == '__main__':
     app.run(debug=True)
-
-# Analizar los principios de diseño
-# y patrones de diseños
-
-# La extension para agregar dos tipos de productos nuevos
-# catalogo v.2 tiene monturas y cuerpos de personajes 
-

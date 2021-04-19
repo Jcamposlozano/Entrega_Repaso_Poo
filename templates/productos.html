@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html lang="es">
     <head>
         <title>Productos</title>
     </head>
-<body>
-    <table border=1>
-        <tr>
-            <th>Grupo</th>
-            <th>Imagen</th>
-            <th>Descripción</th>
-        </tr>
-        {% for p in productos %}
+    <body>
+        <table border="1">
             <tr>
-                <td>{{ p.grupo }}</td>
-                <td><img src = "static/{{ p.imagen }}" width="150px"></td>
-                <td>{{ p.descripcion }}</td>
+                <th>Grupo</th><th>Imagen</th><th>Descripción</th>
             </tr>
-        {% endfor %}
+            {% for p in productos %}
+                <tr>
+                    <td>{{ p.grupo }}</td>
+                    <td><img src="static/{{ p.imagen }}" alt="{{ p.imagen }}" width="150px"></td>
+                    <td>{{ p.descripcion }}</td>
+                </tr>
+            {% endfor %}
+        </table>
 
-    </table>
-</body>
+    </body>
+
 </html>
